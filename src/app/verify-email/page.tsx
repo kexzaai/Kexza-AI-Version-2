@@ -77,15 +77,12 @@ export default function VerifyEmailPage() {
   return (
     <div className="flex min-h-screen items-center justify-center p-4 md:p-8">
       <motion.div
-        initial={{ opacity: 0, scale: 0.9, y: 30 }}
+        initial={{ opacity: 0, scale: 0.9, y: 0 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="w-full max-w-[500px] text-center"
       >
-        <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        >
+        <div>
           <GlassCard className="p-10 md:p-14 space-y-10 backdrop-blur-[40px] border-white/10 relative overflow-visible shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             {/* Top Highlight Wrapper */}
             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
@@ -93,7 +90,7 @@ export default function VerifyEmailPage() {
             {/* Icon Section */}
             <div className="flex justify-center relative">
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-cyan-400/30 rounded-[32px] blur-3xl animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-cyan-400/30 rounded-[32px] blur-3xl" />
                 <div className="relative p-8 bg-white/5 rounded-[32px] border border-white/15 backdrop-blur-2xl shadow-inner group-hover:border-white/25 transition-colors duration-500">
                   <Mail className="h-16 w-16 text-white opacity-90" />
                   <motion.div 
@@ -142,7 +139,7 @@ export default function VerifyEmailPage() {
                 ) : (
                   <div className="flex items-center justify-center gap-3">
                     Resend Verification Email
-                    <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-5 w-5 transition-transform" />
                   </div>
                 )}
               </GradientButton>
@@ -166,7 +163,7 @@ export default function VerifyEmailPage() {
               If the problem persists, contact our support team.
             </div>
           </GlassCard>
-        </motion.div>
+        </div>
 
         {/* Floating Decorative Elements */}
         <div className="absolute -top-[5%] -left-[10%] w-[300px] h-[300px] bg-purple-600/5 rounded-full blur-[100px] pointer-events-none" />

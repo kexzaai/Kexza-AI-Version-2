@@ -31,7 +31,7 @@ export default function LandingPage() {
         
         {/* Floating Cards */}
         <div className="relative h-[600px] w-full hidden lg:block">
-          <GlassCard className="absolute top-[10%] left-[10%] w-72 animate-[bounce_8s_infinite] shadow-glow-button">
+          <GlassCard className="absolute top-[10%] left-[10%] w-72 shadow-glow-button">
             <h3 className="text-white font-bold mb-2 flex items-center gap-2">
               <Layers className="w-5 h-5 text-[#8A2BE2]" /> Task Dashboard
             </h3>
@@ -42,7 +42,7 @@ export default function LandingPage() {
             </div>
           </GlassCard>
 
-          <GlassCard className="absolute top-[40%] right-[5%] w-64 animate-[bounce_6s_infinite_1s]">
+          <GlassCard className="absolute top-[40%] right-[5%] w-64">
             <h3 className="text-white font-bold mb-2 flex items-center gap-2">
               <Activity className="w-5 h-5 text-[#00F5FF]" /> Workflow Status
             </h3>
@@ -55,7 +55,7 @@ export default function LandingPage() {
             </div>
           </GlassCard>
 
-          <GlassCard className="absolute bottom-[10%] left-[20%] w-72 animate-[bounce_10s_infinite_2s]">
+          <GlassCard className="absolute bottom-[10%] left-[20%] w-72">
             <h3 className="text-white font-bold mb-2 flex items-center gap-2">
               <BrainCircuit className="w-5 h-5 text-[#FF00CC]" /> AI Insights
             </h3>
@@ -77,7 +77,7 @@ export default function LandingPage() {
             { title: "Client CRM", icon: <Activity className="text-[#00F5FF] w-8 h-8" />, desc: "Unified portal for documents, communication, and billing." },
             { title: "Smart Notifications", icon: <Bell className="text-[#FF00CC] w-8 h-8" />, desc: "Instant multi-channel alerts for pending approvals and tasks." },
           ].map((feat, i) => (
-            <GlassCard key={i} className="flex flex-col items-start p-8 gap-4 hover:-translate-y-2 transition-transform duration-300">
+            <GlassCard key={i} className="flex flex-col items-start p-8 gap-4 shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
               <div className="p-3 bg-white/5 rounded-2xl border border-white/10">{feat.icon}</div>
               <h3 className="text-xl font-bold text-white">{feat.title}</h3>
               <p className="text-white/65 font-medium leading-relaxed">{feat.desc}</p>

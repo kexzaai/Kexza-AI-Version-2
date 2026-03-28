@@ -80,7 +80,7 @@ export default function WelcomePage() {
   return (
     <AuroraBackground className="flex items-center justify-center p-4 md:p-8">
       <motion.div
-        initial={{ opacity: 0, scale: 0.95, y: 30 }}
+        initial={{ opacity: 0, scale: 0.95, y: 0 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="w-full max-w-[650px] text-center"
@@ -97,7 +97,7 @@ export default function WelcomePage() {
               transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-3xl" />
               <div className="relative p-6 bg-white/5 rounded-[32px] border border-white/15 backdrop-blur-2xl shadow-inner">
                 <Sparkles className="w-16 h-16 text-white group-hover:text-cyan-300 transition-colors" />
               </div>
@@ -107,7 +107,7 @@ export default function WelcomePage() {
           {/* Welcome Text */}
           <div className="space-y-6">
             <motion.h1 
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               className="text-4xl md:text-5xl font-[800] text-white tracking-tight leading-tight"
@@ -115,7 +115,7 @@ export default function WelcomePage() {
               Welcome, <span className="text-gradient">{user?.full_name?.split(' ')[0] || "User"}</span>!
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
               className="text-white/65 font-medium text-lg md:text-xl leading-relaxed max-w-[480px] mx-auto"
@@ -126,7 +126,7 @@ export default function WelcomePage() {
 
           {/* Action Button */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
             className="pt-4"
@@ -137,7 +137,7 @@ export default function WelcomePage() {
             >
               <div className="flex items-center justify-center gap-3">
                 Get Started
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
+                <ArrowRight className="w-6 h-6 transition-transform" />
               </div>
             </GradientButton>
           </motion.div>

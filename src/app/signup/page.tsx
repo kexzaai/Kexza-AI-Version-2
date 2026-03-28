@@ -118,7 +118,7 @@ export default function SignupPage() {
   return (
     <div className="flex min-h-screen items-center justify-center p-4 py-12 md:p-8">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="w-full max-w-[550px]"
@@ -246,7 +246,7 @@ export default function SignupPage() {
                   ) : (
                     <div className="flex items-center justify-center gap-2">
                       Start Your Execution Engine
-                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="h-5 w-5 transition-transform" />
                     </div>
                   )}
                 </GradientButton>

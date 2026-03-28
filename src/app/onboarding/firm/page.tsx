@@ -92,7 +92,7 @@ export default function FirmOnboardingPage() {
   return (
     <AuroraBackground className="flex items-center justify-center p-4 py-12 md:p-8">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="w-full max-w-[600px]"
@@ -100,7 +100,7 @@ export default function FirmOnboardingPage() {
         <div className="mb-8 text-center space-y-3">
           <div className="flex justify-center mb-4">
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl">
-              <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-cyan-400" />
               <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/50">Step 1 of 3: Organization</span>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function FirmOnboardingPage() {
                 ) : (
                   <div className="flex items-center justify-center gap-2">
                     Continue to Team Setup
-                    <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-5 w-5 transition-transform" />
                   </div>
                 )}
               </GradientButton>
